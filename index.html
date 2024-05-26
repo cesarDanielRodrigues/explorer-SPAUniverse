@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universe</title>
+</head>
+
+<body>
+    <a href="">
+        <img src="./assets/Vector.svg">
+    </a>
+    <a href="/" onclick="route()">Home</a>
+    <a href="/universe" onclick="route()">O Universo</a>
+    <a href="/exploration" onclick="route()">Exploração</a>
+
+    <div id="app"></div>
+    <script>
+        function route(event) {
+            event = event || window.event
+            event.preventDefault()
+
+            console.log('teste')
+        }
+        window.route = () => route()
+    </script>
+</body>
+
+</html>
