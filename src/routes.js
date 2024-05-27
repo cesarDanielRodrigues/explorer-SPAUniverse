@@ -1,3 +1,7 @@
+import { Actions } from "./actions.js"
+
+const actions = new Actions()
+
 export class Router{
     routes ={}
     add (routeName,page){
@@ -9,14 +13,11 @@ export class Router{
 
         window.history.pushState(null,'',event.target.href)
 
-        
-
         this.handle()
-
-        
     }
     handle(){
         const {pathname} = window.location
+        actions.changeBackground(pathname)
 
         const route = this.routes[pathname] || this.route[404]
 
