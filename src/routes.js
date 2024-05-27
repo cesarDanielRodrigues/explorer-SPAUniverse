@@ -9,7 +9,11 @@ export class Router{
 
         window.history.pushState(null,'',event.target.href)
 
+        
+
         this.handle()
+
+        
     }
     handle(){
         const {pathname} = window.location

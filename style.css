@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    background-color: black;
+    background-size: 100vw 100vh;
+}
+.menu, .nav{
+    display: flex;
+}
+.menu{
+    border: 1px solid red;
+    margin: 40px 0 0 72px;
+    align-items: center;
+    gap: 43px;
+}
+.nav{
+    gap: 32px;
+}
+.nav a {
+    border: 1px solid red;
+    text-decoration: none;
+    color: #8D8D99;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 22px;
+}
+.menu a:nth-child(1){
+    font-size: 24px;
+}
+.menu .active{
+    color: #fff;
+    font-weight: 700;
+}
+#app{
+    height: calc(100vh - 90px);
+}
+.home{
+    border: 1px solid red;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.home > *{
+
+}
+.home a{
+    padding: 12px 32px;
+    border: 1px solid #fff
+}
+
+#universe,#exploration{
+    padding: 103px 102px;
+}
+h1{
+    margin-bottom: 16px;
+    color: #E1E1E6;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+}
+p{
+    width: 648px;
+    color: #E1E1E6;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+/*
+.home{
+     background: url(./assets/mountains-universe-1.png); 
+}
+.universe{
+     background: url(./assets/mountains-universe-2.png); 
+}
+.exploration{
+     background: url(./assets/mountains-universe-3.png); 
+}
+*/
