@@ -1,8 +1,12 @@
-export function toogleActive(links){
-    links.forEach(link=>{
-        // const isActive = links.classList.contains('active')
-        console.log(links.classList)
-        links.forEach(link => link.classList.remove('active'))
-        !isActive ? links.classList.contains('active') : null
-    })
+import { nav } from "./element.js";
+
+export function toogleActive(link) {
+  const isActive = link.classList.contains("active");
+
+  nav.forEach((route) => {
+      route.classList.remove("active");
+  });
+  if (!isActive) {
+    link.classList.add("active");
+  }
 }
