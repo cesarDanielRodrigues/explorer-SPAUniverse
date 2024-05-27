@@ -1,12 +1,14 @@
-import { nav } from "./element.js";
+import { nav, body,homeButton } from "./element.js";
+import { backgroundImages } from "./background.js";
 
 export function toogleActive(link) {
-  const isActive = link.classList.contains("active");
-
   nav.forEach((route) => {
-      route.classList.remove("active");
+    route.classList.remove("active");
   });
-  if (!isActive) {
-    link.classList.add("active");
-  }
+  link.classList.add("active");
+}
+export function changeBackground(){
+    const {pathname} = window.location
+
+    body.style.background = `url(${backgroundImages[pathname]}) center/cover`
 }
