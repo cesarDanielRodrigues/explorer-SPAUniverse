@@ -1,14 +1,23 @@
-// export class Route{
-//     routes ={
-//     }
-//     add (pathName,page){
-//         this.routes[pathName] = page
-//     }
-//     route(event){
-//         event = event || window.event
-//         event.
+export class Router{
+    routes ={}
+    add (routeName,page){
+        this.routes[routeName] = page
+    }
+    route(event){
+        event = event || window.event
+        event.preventDefault()
 
-//         window.history.pushState(null,'',event.target)
-//     }
+        window.history.pushState(null,'',event.target.href)
 
-// }
+        this.handle()
+    }
+    handle(){
+        const {pathname} = window.location
+
+        const route = this.routes[pathname] || this.route[404]
+
+        fetch(route)
+        .then(data=>data.text())
+        .then(html=>document.getElementById('app').innerHTML = html)
+    }
+}
