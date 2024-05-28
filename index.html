@@ -20,15 +20,13 @@
       </a>
       <div class="nav">
         <a href="/" onclick="route()" class="active">Home</a>
-        <a href="/universe" onclick="route()">O Universo</a>
+        <a href="/universe" onclick="route()" name="selected">O Universo</a>
         <a href="/exploration" onclick="route()">Exploração</a>
       </div>
     </div>
     <div id="app"></div>
 
     <script type="module" src="src/index.js"></script>
-    <script>
-        // console.log(document.querySelector('.nav a:nth-child(2)').getAttribute('href').toUpperCase().replace("/",""))
-    </script>
+
   </body>
 </html>

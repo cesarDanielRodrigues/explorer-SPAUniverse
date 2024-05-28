@@ -9,6 +9,8 @@ export class Actions {
     link.classList.add("active");
   }
   changeBackground(image) {
+    image = image || 404
+
     body.style.background = `url(${backgroundImages[image]}) center/cover`;
   }
 }

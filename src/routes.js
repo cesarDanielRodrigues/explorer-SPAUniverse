@@ -1,28 +1,32 @@
-import { Actions } from "./actions.js"
+
+import { selectedLink } from "./events.js";
+import { Actions } from "./actions.js";
+
 
 const actions = new Actions()
 
-export class Router{
-    routes ={}
-    add (routeName,page){
-        this.routes[routeName] = page
-    }
-    route(event){
-        event = event || window.event
-        event.preventDefault()
+export class Router {
+  routes = {};
+  add(routeName, page) {
+    this.routes[routeName] = page;
+  }
+  route(event) {
+    event = event || window.event;
+    event.preventDefault();
 
-        window.history.pushState(null,'',event.target.href)
 
-        this.handle()
-    }
-    handle(){
-        const {pathname} = window.location
-        actions.changeBackground(pathname)
+    window.history.pushState(null, "", event.target.href);
+    
+    selectedLink(event)
+    this.handle();
+}
+handle() {
+    const { pathname } = window.location;
+    
+    const route = this.routes[pathname] || this.routes[404];
 
-        const route = this.routes[pathname] || this.route[404]
-
-        fetch(route)
-        .then(data=>data.text())
-        .then(html=>document.getElementById('app').innerHTML = html)
-    }
+    fetch(route)
+      .then(data => data.text())
+      .then(html => document.getElementById("app").innerHTML = html);
+  }
 }

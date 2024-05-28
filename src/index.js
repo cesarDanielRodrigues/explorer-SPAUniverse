@@ -1,6 +1,6 @@
 import { Router } from "./routes.js";
 import { nav } from "./element.js";
-import { clickLink } from "./events.js";
+
 
 
 const router = new Router()
@@ -12,7 +12,9 @@ router.add(404,'/pages/404.html')
 
 router.handle()
 
-clickLink()
-
-window.onpopstate = ()=> router.handle()
+// window.onpopstate = ()=> router.handle()
+// window.addEventListener('popstate', ()=>{
+//     router.handle()
+//     router.route()
+// })
 window.route = () => router.route()

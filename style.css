@@ -4,22 +4,26 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+
 body {
-  background-color: black;
-  background-size: 100vw 100vh;
+  background: black;
 }
+
 .menu,
 .nav {
   display: flex;
 }
+
 .menu {
   margin: 40px 0 0 72px;
   align-items: center;
   gap: 43px;
 }
+
 .nav {
   gap: 32px;
 }
+
 .nav a {
   text-decoration: none;
   color: #8d8d99;
@@ -27,17 +31,21 @@ body {
   font-weight: 400;
   line-height: 22px;
 }
+
 .menu a:nth-child(1) {
   font-size: 24px;
 }
+
 /* Seletor para ativar link clicado */
 .nav .active {
   color: #fff;
   font-weight: 700;
 }
+
 #app {
   height: calc(100vh - 90px);
 }
+
 .home {
   height: 100%;
   display: flex;
@@ -45,11 +53,15 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .home a {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
   text-decoration: none;
   color: #fff;
   padding: 12px 32px;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   border-radius: 5px;
 }
 
@@ -57,13 +69,20 @@ body {
 .exploration {
   padding: 103px 102px;
 }
+
 h1 {
+  padding: 0;
   margin-bottom: 16px;
   color: #e1e1e6;
   font-weight: 700;
   font-size: 48px;
   line-height: 60px;
 }
+
+.home h1 {
+  margin-bottom: 24px;
+}
+
 p {
   width: 648px;
   color: #e1e1e6;
@@ -73,5 +92,5 @@ p {
 }
 
 .backgroundHome {
-    background: url(./assets/mountains-universe-1.png) center/cover;
+  background: url(./assets/mountains-universe-1.png) center/cover;
 }
